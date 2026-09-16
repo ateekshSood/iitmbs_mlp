@@ -21,11 +21,17 @@ df.head(4)
 #creating series 
 
 
-cities = pd.Series(['Mumabi' , 'Banglore' , 'Chennai' ,"yeh"])
-population = pd.Series([10000 , 100000 , 10000])
+cities = pd.Series(np.array(['Mumabi' , 'Banglore' , 'Chennai' ,"yeh"]))
+population = pd.Series(np.array([10000 , 100000 , 10000]))
 
 df = pd.DataFrame( {"City" : cities , "Populaiton" : population} )
-df
 df.fillna(df['Populaiton'].mean())
+
+df
 # %%
+
+import polars as pl 
+
+df = pl.DataFrame(df)
+print(df)
 
