@@ -80,3 +80,4 @@ print(type(rows))
 print(rows.head())
 # %%
 print(rows.iloc[0])
+# %%
