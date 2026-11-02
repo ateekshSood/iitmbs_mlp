@@ -1,12 +1,13 @@
 # %%
 
-from IPython.core.pylabtools import figsize
-from jedi.third_party.typeshed.stubs.geopandas.geopandas.array import transform
 import enum
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+from IPython.core.pylabtools import figsize
+from jedi.third_party.typeshed.stubs.geopandas.geopandas.array import transform
 
 # %%
 
