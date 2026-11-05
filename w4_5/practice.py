@@ -41,5 +41,9 @@ plt.show()
 # %%
 
 print(len(x[x['Population'] < 10]))
+# %%
+plt.scatter(x['Longitude'] , x['Latitude'] ,s = 2 , alpha=0.3 , c='tab:blue')
+plt.axis('off')
+plt.show()
 
 
