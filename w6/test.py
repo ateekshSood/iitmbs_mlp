@@ -71,8 +71,43 @@ plt.show()
 # %%
 
 
-from sklearn.model_selection import train_test_split
+
 
 x_train , x_test , y_train , y_test = x[:60000] , x[60000:] , y[:60000] , y[60000:]
 
 # %%
+
+# dataset is imbalanced or balanced
+
+import seaborn as sns 
+
+sns.histplot(data = y_train)
+plt.show()
+# %%
+
+y_train_0 = -1 * np.ones(len(y_train) , dtype=np.int32)
+
+indx_0 = np.where(y_train == '0')
+y_train_0[indx_0] = 1
+# %%
+fig , ax = plt.subplots(3 ,3 , figsize=(12 , 10))
+
+ax = ax.flatten()
+
+for i in range(9):
+
+    ax[i].imshow(x_train[i].reshape(28 , 28 , -1) , cmap='binary')
+    ax[i].axis('off')
+    ax[i].set_title(y_train_0[i])
+
+plt.subplots_adjust()
+plt.show()
+# %%
+
+
+#baseline model 
+
+
+from sklearn.linear_model import Perceptron
+
+binary_clf = Perceptron()
