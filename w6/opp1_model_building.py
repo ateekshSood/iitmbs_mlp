@@ -96,7 +96,8 @@ grid.fit(x_train , y_train)
 print(r2_score(y_test , grid.best_estimator_.predict(x_test)))
 # %%
 
-print(grid.best_estimator_[0].explained_variance_[0])
+print(grid.best_estimator_[# %%
+    0].explained_variance_[0])
 
 
 # %%
